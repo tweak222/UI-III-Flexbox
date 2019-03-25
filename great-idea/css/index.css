@@ -188,6 +188,10 @@ button {
 	border-radius: 4px;
 }
 
+.fas {
+	padding-bottom: 20px;
+}
+
 /* 
 	LAYOUT -------------------------------- */
 .container {
@@ -292,7 +296,7 @@ button {
 }
 
 /* 
-	MAIN STYLING -------------------------------- */
+	MAIN PAGE STYLING -------------------------------- */
 
 /* Main Header Block */
 #main-header {
