@@ -3,19 +3,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -23,25 +91,44 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -49,18 +136,243 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Titillium Web', sans-serif;
+html,
+body {
+	height: 100%;
+	font-family: 'Titillium Web', sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Bangers', cursive;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+/* 
+	BASE STYLES -------------------------------- */
+body {
+	padding-top: 130px;
+	line-height: 1.3;
+}
+
+h2 {
+	font-size: 25px;
+	padding-bottom: 5px;
+	border-bottom: solid 1px #999;
+}
+
+ul {
+	padding: 20px 0 0 20px;
+	line-height: 2;
+	list-style: square;
+}
+
+button {
+	border: solid 1px #333;
+	background: white;
+	min-width: 150px;
+}
+
+.btn {
+	margin: 15px 0 0;
+	padding: 10px;
+	border-radius: 4px;
+}
+
+/* 
+	LAYOUT -------------------------------- */
+.container {
+	max-width: 876px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.flex {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.flex-item {
+	padding: 20px;
+	margin: 20px 0;
+	align-self: center;
+}
+
+.by-two {
+	width: 48%;
+}
+
+.by-three {
+	width: 31%;
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+	.flex {
+		flex-flow: column wrap;
+		justify-content: space-around;
+	}
+
+	.by-two,
+	.by-three {
+		width: 98%;
+	}
+}
+
+/* 
+	HELPERS -------------------------------- */
+.--shadow-border {
+	border: solid 1px rgba(51, 51, 51, 0.3);
+	border-top: none;
+	box-shadow: 0 4px 8px rgba(51, 51, 51, 0.5);
+}
+
+.--hoverable {
+	transition: ease all .25s;
+}
+
+.--hoverable:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 6px 16px rgba(51, 51, 51, 0.45);
+	transition: ease-in all .25s;
+}
+
+/* 
+	NAVIGATION -------------------------------- */
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.nav-flex {
+	display: flex;
+	max-width: 1080px;
+	margin: 0 auto;
+	justify-content: space-between;
+	background: linear-gradient(45deg, rgb(6, 255, 234) 0%, rgb(0, 195, 255) 40%, rgb(30, 223, 118) 100%);
+	box-shadow: 0 8px 16px rgba(51, 51, 51, 0.3);
+	padding: 20px 40px;
+}
+
+.nav-link {
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
+	color: #555;
+	transition: all .25s;
+	border-bottom: solid 1px rgba(51, 51, 51, 0);
+	align-self: center;
+}
+
+.nav-link:hover {
+	color: #000;
+	transform: scale(1.25, 1.25);
+	transition: ease-in-out all .3s;
+	border-bottom: solid 1px #333;
+}
+
+.logo {
+	align-self: center;
+}
+
+.nav-link.active {
+	transform: scale(1.25, 1.25);
+	border-bottom: solid 1px #333;
+}
+
+/* 
+	MAIN STYLING -------------------------------- */
+
+/* Main Header Block */
+#main-header {
+	margin-bottom: 20px;
+	padding: 50px 40px;
+	text-align: center;
+}
+
+.main-btn {
+	padding: 5px 50px;
+}
+
+.main-heading {
+	line-height: 1;
+	font-size: 80px;
+}
+
+/* Main Content */
+.middle-img {
+	width: 100%;
+	margin: 15px 0;
+	box-shadow: 0 3px 8px rgba(51, 51, 51, 0.5);
+}
+
+/* Contact Section */
+#contact {
+	justify-content: space-around;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+#contact h2 {
+	width: 100%;
+}
+
+#contact .flex-item {
+	text-align: center;
+	margin: 10px 0;
+	padding: 10px;
+}
+
+/* 
+	SERVICES PAGE STYLING -------------------------------- */
+
+/* Services Header Block */
+#services-header {
+	margin-bottom: 20px;
+	flex-direction: column;
+}
+
+.services-heading {
+	font-size: 25px;
+}
+
+.services-header-img {
+	width: 100%;
+}
+
+/* Facts Section */
+#facts {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.services-info-img {
+	width: 100%;
+}
+
+/*
+	FOOTER STYLING -------------------------------- */
+
+/* Footer */
+footer {
+	display: flex;
+	justify-content: space-around;
+	margin: 40px 0;
+	text-align: center;
+	height: 80px;
+}
+
+footer p {
+	align-self: center;
+}
