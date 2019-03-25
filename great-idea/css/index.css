@@ -160,7 +160,7 @@ h5 {
 /* 
 	BASE STYLES -------------------------------- */
 body {
-	padding-top: 17rem;
+	padding-top: 280px;
 	line-height: 1.3;
 }
 
@@ -183,7 +183,7 @@ button {
 }
 
 .btn {
-	margin: 15px 0 0;
+	margin: 15px 0 10px;
 	padding: 10px;
 	border-radius: 4px;
 }
@@ -217,8 +217,8 @@ button {
 
 .flex {
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
+	flex-flow: column wrap;
+	justify-content: space-around;
 }
 
 .flex-item {
@@ -227,30 +227,32 @@ button {
 	align-self: center;
 }
 
-.by-two {
-	width: 48%;
+.by-two,
+.by-three {
+	width: 95%;
 }
 
-.by-three {
-	width: 31%;
+.flex-item {
+	padding: 10px;
+	margin: 10px 0;
 }
 
 /* Responsive */
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 601px) {
 	.flex {
-		flex-flow: column wrap;
-		justify-content: space-around;
+		flex-flow: row wrap;
+		justify-content: space-between;
 	}
 
-	.by-two,
+	.by-two {
+		width: 48%;
+	}
+
 	.by-three {
-		width: 95%;
+		width: 31%;
 	}
 
-	.flex-item {
-		padding: 10px;
-		margin: 10px 0;
-	}
+
 }
 
 /* 
