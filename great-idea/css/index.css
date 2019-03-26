@@ -475,6 +475,66 @@ button {
 	width: 100%;
 }
 
+/* 
+	ABOUT PAGE STYLING -------------------------------- */
+#about-header {
+	background: #fff url("https://source.unsplash.com/876x876/?computer,programming") no-repeat center;
+	height: 400px;
+	border: none;
+	padding: 40px 0;
+	font-weight: 600;
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+
+.overlay {
+	height: 60%;
+	width: 90%;
+	background: rgba(255, 255, 255, 0.9);
+	padding: 10px 20px 0;
+}
+
+.about-heading {
+	font-size: 30px;
+}
+
+.about-img {
+	border: none;
+	height: 274px;
+	padding: 0;
+	background: url("https://source.unsplash.com/274x274/?computer,programming");
+}
+
+
+
+@media only screen and (max-width: 846px) {
+	#about-header {
+		font-size: 16px;
+		height: 40%;
+		padding-top: 10%;
+	}
+
+	.about .by-three {
+		width: 48%;
+	}
+
+	.about-img {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.overlay {
+		height: 100%;
+		width: 100%;
+	}
+
+	.about .by-three,
+	.about .flex-item {
+		width: 95%;
+	}
+}
+
 /*
 	FOOTER STYLING -------------------------------- */
 
