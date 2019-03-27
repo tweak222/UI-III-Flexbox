@@ -317,11 +317,6 @@ button {
 	border-bottom: solid 1px #333;
 }
 
-.nav-link:not(:last-child),
-.nav-link:hover:not(:last-child) {
-	margin-bottom: 10px;
-}
-
 .nav-logo {
 	margin-bottom: 10px;
 	order: 1;
