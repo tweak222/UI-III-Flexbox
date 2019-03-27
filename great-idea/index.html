@@ -1,12 +1,17 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta charset="utf-8">
 
   <title>Great Idea!</title>
 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Bangers|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
 
   <!--[if lt IE 9]>
@@ -14,10 +19,109 @@
   <![endif]-->
 </head>
 
-  <body>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-flex">
+      <a class="nav-link" href="services.html">Services</a>
+      <a class="nav-link" href="#">Product</a>
+      <a class="nav-link" href="#">Vision</a>
+      <a class="nav-link" href="#">Features</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="#">Contact</a>
 
-    <!-- Copy and paste your HTML from the first UI project here -->
-      
-    
-  </body>
+      <a class="nav-logo" href="index.html">
+        <img class="logo" src="img/logo.png" alt="Great Idea! Company logo.">
+      </a>
+    </div><!-- ./nav-flex ./container -->
+  </nav><!-- ./navbar -->
+
+  <!-- Header -->
+  <header id="main-header" class="flex container --shadow-border">
+    <div class="flex-item">
+      <h1 class="main-heading">Innovation <br> On <br> Demand</h1>
+      <button class="main-btn">Get Started</button>
+    </div><!-- ./flex-item -->
+
+    <img class="main-header-img" src="img/header-img.png" alt="Image of a code snippet.">
+  </header><!-- #/main-header ./flex ./container -->
+
+  <!-- Main Content Section -->
+  <section id="main-content" class="flex container">
+    <!-- Top Group -->
+    <a href="#" class="flex-item by-two --shadow-border --hoverable">
+      <h2>Features</h2>
+      <p>Aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.
+        Suspendisse
+        eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.</p>
+    </a>
+    <!-- ./flex-item ./by-two -->
+
+    <a href="about.html" class="flex-item by-two --shadow-border --hoverable">
+      <h2>About</h2>
+      <p>Aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.
+        Suspendisse
+        eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.</p>
+    </a>
+    <!-- ./flex-item ./by-two -->
+
+    <!-- Middle Image -->
+    <img class="middle-img" src="img/mid-page-accent.jpg" alt="Image of code snippets across the screen">
+
+    <!-- Bottom Group -->
+    <a href="services.html" class="flex-item by-three --shadow-border --hoverable">
+      <h2>Services</h2>
+      <p>Aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.
+        Suspendisse
+        eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.</p>
+    </a>
+    <!-- ./flex-item -->
+
+    <a href="" class="flex-item by-three --shadow-border --hoverable">
+      <h2>Product</h2>
+      <p>Aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.
+        Suspendisse
+        eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.</p>
+    </a>
+    <!-- ./flex-item -->
+
+    <a href="" class="flex-item by-three --shadow-border --hoverable">
+      <h2>Vision</h2>
+      <p>Aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.
+        Suspendisse
+        eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.</p>
+    </a>
+    <!-- ./flex-item -->
+  </section><!-- ./flex -->
+
+  <!-- Contact Section -->
+  <section id="contact" class="flex container --shadow-border">
+    <h2>Contact</h2>
+
+    <div class="flex-item">
+      <i class="fas fa-map-marked-alt fa-2x"></i>
+      <address>
+        123 Way 456 Street
+        <br>
+        Somewhere, USA
+      </address>
+    </div><!-- ./flex-item -->
+
+    <div class="flex-item">
+      <i class="fas fa-phone fa-2x"></i>
+      <p>1 (888) 888-8888</p>
+    </div><!-- ./flex-item -->
+
+    <div class="flex-item">
+      <i class="fas fa-envelope-open-text fa-2x"></i>
+      <p>sales@greatidea.io</p>
+    </div><!-- ./flex-item -->
+  </section><!-- #/contact ./flex ./container -->
+
+  <!-- Footer -->
+  <footer class="container --shadow-border">
+    <p>Copyright Great Idea! 2018</p>
+  </footer><!-- ./container -->
+</body>
+
 </html>
